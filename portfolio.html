@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sriram K | Mechatronics Engineer Portfolio</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-primary: #0a0f1d;
+      --bg-secondary: #111827;
+      --card-bg: #1f293d;
+      --accent-color: #3b82f6;
+      --accent-hover: #60a5fa;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border-color: #374151;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 50px;
+    }
+
+    a {
+      color: var(--accent-hover);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    /* Header / Hero Section */
+    header {
+      background: linear-gradient(135deg, #111827 0%, #1e293b 100%);
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom: 2px solid var(--border-color);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-name {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -1px;
+      color: #ffffff;
+      margin-bottom: 5px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      color: var(--accent-color);
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .contact-bar {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 15px;
+      font-size: 0.95rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      background-color: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 10px;
+    }
+
+    /* Grid Layouts */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    /* Objective */
+    .objective-text {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    /* Skills Tags */
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .skill-badge {
+      background-color: var(--card-bg);
+      border: 1px solid var(--accent-color);
+      color: var(--text-main);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Cards */
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-color);
+    }
+
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .card-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Table Styling for Education */
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .edu-table th, .edu-table td {
+      text-align: left;
+      padding: 12px 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .edu-table th {
+      background-color: var(--card-bg);
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .edu-table tr:hover {
+      background-color: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .hero-name { font-size: 2rem; }
+      .contact-bar { flex-direction: column; align-items: center; }
+      .edu-table { font-size: 0.85rem; }
+      .edu-table th, .edu-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1 class="hero-name">SRIRAM K</h1>
+    <p class="hero-subtitle">B.E. Mechatronics Engineering Student</p>
+    <p><i class="fa-solid fa-location-dot"></i> Avinashi, Tiruppur, Tamil Nadu, India – 641663</p>
+    
+    <div class="contact-bar">
+      <div class="contact-item">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 9042738006</span>
+      </div>
+      <div class="contact-item">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:sriramsriram11306@gmail.com">sriramsriram11306@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/sriramk102" target="_blank">github.com/sriramk102</a>
+      </div>
+      <div class="contact-item">
+        <i class="fa-brands fa-linkedin"></i>
+        <a href="https://www.linkedin.com/in/sri-ram-363741379" target="_blank">LinkedIn Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Objective -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-bullseye"></i> Career Objective</h2>
+      <p class="objective-text">
+        To obtain a challenging position in a dynamic organization where I can effectively utilize my skills, knowledge, and enthusiasm to contribute to the organization’s success while continuously growing both professionally and personally.
+      </p>
+    </section>
+
+    <!-- Technical Skills & Certifications -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-gears"></i> Technical Skills & Certifications</h2>
+      <div class="skills-container">
+        <div class="skill-badge"><i class="fa-solid fa-cube"></i> AutoCAD – Autodesk (2024)</div>
+        <div class="skill-badge"><i class="fa-solid fa-drafting-compass"></i> SolidWorks – Dassault Systèmes (2025)</div>
+        <div class="skill-badge"><i class="fa-solid fa-microchip"></i> PCB Design</div>
+        <div class="skill-badge"><i class="fa-solid fa-code"></i> Basic C</div>
+        <div class="skill-badge"><i class="fa-solid fa-robot"></i> PLC Programming</div>
+        <div class="skill-badge"><i class="fa-solid fa-faucet-drip"></i> Fluid Power Systems</div>
+        <div class="skill-badge"><i class="fa-solid fa-pen-ruler"></i> CAD Modeling</div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Key Projects</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">Biodegradable Secondary Fertilizer System</h3>
+          <p class="card-subtitle">Food Waste Processing Automation</p>
+          <p>An automated system that converts food waste into biodegradable fertilizer rich in secondary nutrients such as calcium, magnesium, and sulfur.</p>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Design of a Self-Sacrificing Drone Frame</h3>
+          <p class="card-subtitle">Fire Suppression Autonomous Drone</p>
+          <p>Developed a lightweight autonomous drone with a biodegradable frame that melts at high temperatures to release ABC fire-extinguisher powder and suppress small fires.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Education & Qualifications</h2>
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Institution</th>
+            <th>Year</th>
+            <th>CGPA / Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>B.E. Mechatronics Engineering</strong></td>
+            <td>Kongu Engineering College, Perundurai</td>
+            <td>2027</td>
+            <td>7.81 (Till 6th Sem)</td>
+          </tr>
+          <tr>
+            <td><strong>HSC (12th)</strong></td>
+            <td>Govt. Boys. Hr. Sec. School, Avinashi</td>
+            <td>2023</td>
+            <td>82.66%</td>
+          </tr>
+          <tr>
+            <td><strong>SSLC (10th)</strong></td>
+            <td>Govt. Hr. Sec. School, Avinashi</td>
+            <td>2021</td>
+            <td>Completed</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Presentations & Training -->
+    <section class="section">
+      <h2 class="section-title"><i class="fa-solid fa-award"></i> Presentations & Training</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 class="card-title">Paper Presentations</h3>
+          <ul>
+            <li><strong>Ideathon 2025:</strong> Presented "Biodegradable Secondary System Fertilizer using food waste" in Mechatronics Dept, Kongu Engineering College.</li>
+            <br>
+            <li><strong>Techaura 2025:</strong> Presented "Self-Sacrificing drone" in ECE Dept, KPR Engineering College.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="card-title">Inplant Training</h3>
+          <p><strong>Shakthi Knitting Private Ltd, Erode</strong></p>
+          <p class="card-subtitle">April 2024 (4 Days)</p>
+          <p>Gained practical exposure to industrial automation, machinery operation, and manufacturing workflows.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Sriram K. Portfolio Webpage built for VS Code development.</p>
+  </footer>
+
+</body>
+</html>
